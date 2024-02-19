@@ -1,0 +1,43 @@
+
+resource "local_file" "pet" {
+    filename = "/terrafor/pet.txt"
+    content = "We love pets!"
+}
+
+-> resource : is Block name
+
+-> local_file : resource type -> local is provider && file is resource type
+
+-> pet : resource name
+
+=> simple terraform workflow consists of 4 steps
+
+1. prepare terraform or configuration file 
+2. run the terraform init command
+3. review the exectution by run the terraform plan command
+4. apply or create resource by run the terraform apply commnad
+
+basic commands
+
+terraform init
+terraform plan
+terraform apply
+
+-> update & Destory Infra
+
+if there any changes in configuration/terraform file you will run following commands
+
+terraform plan  &&& terraform apply  [ it only apply the new changes]
+
+if you want to destroy the resource using terraform use this command
+
+terraform destroy
+
+
+# while creating resources using terraform - if resources are depending on other resource creation 
+terraform following two methods
+
+1. Implicit dependency :-> no need to mention the dependency resource - we use output of the dependency resource
+
+2. Explicity dependency :-> by using depends_on = [ dependency_resource_name ]
+

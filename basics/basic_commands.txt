@@ -1,0 +1,51 @@
+terraform init
+
+terraform plan
+
+terraform apply or terraform apply -auto-approve
+
+terraform output  or terraform output output_variable_name
+
+terraform show 
+
+terraform show -json
+
+terraform validate
+
+terraform fmt => it will formatting intendations 
+
+terraform providers => it shows the list of providers we used in the files
+
+terraform providers mirror /path/file_name    => it will copy all providers into the file for references
+
+terraform refresh => it will update the state file if any manual changes in the resources
+
+
+
+terraform state list
+
+terraform state show
+
+terraform state show specific_resourec_name
+
+terraform state mv resource_type.resource_name resource_type.new_resource_name
+
+
+terraform pull
+
+terraform rm 
+
+
+terraform destroy or terraform apply -destroy [ both are same]
+
+terraform plan -destroy [it shows the whats going to destroy]
+
+
+----- Work spaces in terraform
+
+terraform workspace list
+
+terraform workspace new dev
+
+terraform workspace select dev
+

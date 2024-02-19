@@ -1,0 +1,17 @@
+If you mention same varible multiple places - terraform considering highest priority as follows
+
+1. command line flags
+    ex: terraform apply -var "filename="path/best-pet.txt"
+
+2. *.auto.tfvars (alphabetical order)
+    ex: in variable.auto.tfvars
+        filename = "path/mypet.txt"
+
+3. terraform.tfvars
+    ex: in terraform.tfvars
+        filename = "path/pets.txt"
+
+4. Environment variables
+    ex: in Environment variables
+        export TF_VAR_filename = "path/cat.txt"
+
